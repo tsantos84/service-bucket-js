@@ -1,0 +1,17 @@
+{
+    "check-coverage": false,
+    "exclude": [
+      "**/*.js",
+      "tests",
+      "dist"
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "all": true
+  }

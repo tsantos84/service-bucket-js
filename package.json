@@ -1,0 +1,47 @@
+{
+  "name": "api-adobe-crm",
+  "version": "1.0.0",
+  "description": "API Adobe CRM is a bridge between MaxMilhas events and Adobe Campaign",
+  "author": "Tales Santos <tales.santos@maxmilhas.com.br>",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.4",
+    "lodash": "^4.17.15",
+    "parms": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/chai-http": "^4.2.0",
+    "@types/glob": "^7.1.1",
+    "@types/lodash": "^4.14.136",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "@types/sinon": "^7.0.13",
+    "@types/sinon-chai": "^3.2.2",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register",
+    "cover": "nyc npm test",
+    "cover:lcov": "nyc --reporter=lcov npm test",
+    "cover:html": "nyc --reporter=html npm test",
+    "build": "tsc -b tsconfig.json",
+    "build:image": "docker build -t api-adobe-crm .",
+    "start": "node dist/entry-point/http/server.js",
+    "start:dev": "nodemon",
+    "start:docker": "docker-compose up -d",
+    "stop:docker": "docker-compose down",
+    "restart:docker": "npm run stop:docker && npm run start:docker",
+    "lint": "eslint src/*/**.ts",
+    "lint:fix": "eslint src/*/**.ts --fix"
+  }
+}
