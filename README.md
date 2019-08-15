@@ -1,6 +1,6 @@
 # PoC - Service Container for Typescript
 
-This is a Prove of Concept to validate an alternative to Inversify package.  
+This is a Proof of Concept to validate an alternative to Inversify package.  
 
 ## Concept
 
