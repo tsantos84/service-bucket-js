@@ -6,7 +6,7 @@
   "license": "ISC",
   "dependencies": {
     "glob": "^7.1.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "parms": "^0.1.2"
   },
   "devDependencies": {
